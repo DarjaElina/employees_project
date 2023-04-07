@@ -47,11 +47,9 @@ class EmployeesAddForm extends Component {
    
     validateInputs = () => {
         const { name, salary } = this.state;
-        if (!(name.trim() >= 2) || !salary){
-            console.log("invalid")
+        if (!(name.trim().length >= 2) || !salary){
             this.setState({ invalid: true })
         } else {
-            console.log("valid")
             this.setState({ invalid: false })
         }
     }
